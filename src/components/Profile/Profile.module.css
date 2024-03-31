@@ -12,6 +12,8 @@ li {
   gap: 8px;
   border-right: 1px solid #9f9797;
   padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 li:last-child {
   border-right: none;
