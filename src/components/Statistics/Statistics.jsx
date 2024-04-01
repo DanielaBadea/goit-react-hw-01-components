@@ -2,13 +2,14 @@ import styles from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
     function generateRandomColor(){
-        let maxVal = 0xFFFFFF; // 16777215
-        let randomNumber = Math.random() * maxVal; 
-        randomNumber = Math.floor(randomNumber);
-        randomNumber = randomNumber.toString(16);
-        let randColor = randomNumber.padStart(6, 0);   
-        return `#${randColor.toUpperCase()}`
-    }
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+      
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
     console.log(generateRandomColor()); 
 
     function Statistics({title, stats}) {
@@ -17,7 +18,7 @@ import PropTypes from 'prop-types';
                 {title && <h2 className={styles.title}>{title}</h2>}
                 <ul className={styles.statList}>
                     {stats.map(stat => (
-                        <li key={stat.id} className={styles.item} style={{backgroundColor: generateRandomColor()}}>
+                        <li key={stat.id} className={styles.itemStat} style={{backgroundColor: generateRandomColor()}}>
                             <span className={styles.label}>{stat.label}</span>
                             <span className={styles.percentage}>{stat.percentage}%</span>
                         </li>
@@ -25,7 +26,7 @@ import PropTypes from 'prop-types';
                 </ul>
             </section>
         );
-    }    
+    };    
 
 Statistics.propTypes = {
     title: PropTypes.string,

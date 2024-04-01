@@ -18,15 +18,15 @@ function Profile({username, tag, location, avatar, stats}) {
   </div>
 
   <ul className={styles.stats}>
-    <li>
+    <li className={styles.itemsProfile}>
       <span className={styles.label}><b>Followers</b></span>
       <span className={styles.quantity}>{stats.followers}</span>
     </li>
-    <li>
+    <li className={styles.itemsProfile}>
       <span className={styles.label}><b>Views</b></span>
       <span className={styles.quantity}>{stats.views}</span>
     </li>
-    <li>
+    <li className={styles.itemsProfile}>
       <span className={styles.label}><b>Likes</b></span>
       <span className={styles.quantity}>{stats.likes}</span>
     </li>
