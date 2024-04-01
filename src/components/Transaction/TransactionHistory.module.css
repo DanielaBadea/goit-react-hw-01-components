@@ -1,0 +1,27 @@
+.transaction-history {
+  margin: 0 auto;
+  /* face ca marginile dintre celulele tabelului să dispară, 
+  a. î. să pară că fiecare rând și coloană sunt lipite una de cealaltă. */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+.data {
+  /* border: 1px solid #ccc; */
+  padding: 20px;
+  font-weight: 500;
+}
+
+th {
+  background-color: #7ea6fd;
+  color: #fff;
+}
+.table-row:nth-child(odd) {
+  /* culoarea pentru fiecare rând impar  */
+  background-color: #c4edff4a;
+}
+.table-row:nth-child(even) {
+  /* culoarea pentru fiecare rând par */
+  background-color: #e3dede;
+}
